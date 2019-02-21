@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-list role="list">
+    <mat-list-item *ngFor="let answer of answers.items">
+      <a href="https://stackoverflow.com/a/{{answer.answer_id}}"
+         mat-button target="_blank">
+         Link to Answer</a>
+    </mat-list-item>
+  </mat-list>
+</mat-card>

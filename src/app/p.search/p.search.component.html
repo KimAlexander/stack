@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <h1>Enter a query</h1>
+  <form (ngSubmit)="onClickSearch()" #SearchForm="ngForm">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Search a question" name="query" [(ngModel)]="name" required>
+    </mat-form-field>
+    <button mat-raised-button type="submit" [disabled]="!SearchForm.form.valid">Find</button>
+  </form>
+</div>

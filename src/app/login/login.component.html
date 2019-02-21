@@ -1,0 +1,19 @@
+<mat-card>
+  <div class="wrapper">
+    <h1>Login</h1>
+
+    <form class="example-form" (ngSubmit)="onFormSubmit()" #UserLogin="ngForm">
+      <mat-form-field class="full-width">
+        <input type="email" matInput placeholder="login" name="email" [(ngModel)]="login" required email>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input type="password" matInput placeholder="password" name="pass" [(ngModel)]="password" required>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" [disabled]="!UserLogin.form.valid">Login</button>
+    </form>
+
+    <div class="center"><a routerLink="/register">Register</a></div>
+  </div>
+</mat-card>

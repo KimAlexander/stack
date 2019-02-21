@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div *ngIf="userEmail && isLoggedIn">
+      <span>Stackoverflow helper</span>
+      <button mat-icon-button>
+        <mat-icon (click)="location.back()">keyboard_arrow_left</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon (click)="location.forward()">keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+    <span class="example-spacer"></span>
+    <span *ngIf="userEmail && isLoggedIn">
+      <span >Welcome, {{userEmail}}</span>
+      <button mat-button (click)="logOut()">Logout</button>
+    </span>
+
+    
+  </mat-toolbar-row>
+
+</mat-toolbar>
